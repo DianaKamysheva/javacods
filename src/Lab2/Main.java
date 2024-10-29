@@ -1,6 +1,7 @@
 //вариант 2
 package Lab2;
 
+
 public class Main {
     public static void main(String[] args) {
         // Задание 1.2
@@ -37,20 +38,39 @@ public class Main {
         System.out.println();
 
         // Задание 3.3 & 4.8
-        City moscow = new City("Москва");
-        City saintPetersburg = new City("Санкт-Петербург");
-        City kazan = new City("Казань");
-        City volgograd = new City("Волгоград");
+        // Создание городов
+        City A = new City("A");
+        City B = new City("B");
+        City C = new City("C");
+        City D = new City("D");
+        City E = new City("E");
+        City F = new City("F");
+        City G = new City("G");
 
-        moscow.addRoute(saintPetersburg, 500);
-        moscow.addRoute(kazan, 800);
-        saintPetersburg.addRoute(volgograd, 1200);
+        // Добавление маршрутов
+        A.addRoute(B, 5);
+        A.addRoute(D, 6);
+        A.addRoute(F, 1);
+        B.addRoute(A, 5);
+        B.addRoute(C, 3);
+        C.addRoute(B, 3);
+        C.addRoute(D, 4);
+        D.addRoute(C, 4);
+        D.addRoute(E, 2);
+        D.addRoute(A, 6);
+        E.addRoute(F, 2);
+        F.addRoute(E, 2);
+        F.addRoute(B, 1);
 
+        // Вывод информации о городах
         System.out.println("\nЗадание 3.3 & 4.8:\n");
-        System.out.println(moscow);
-        System.out.println(saintPetersburg);
-        System.out.println(kazan);
-        System.out.println(volgograd);
+        System.out.println(A);
+        System.out.println(B);
+        System.out.println(C);
+        System.out.println(D);
+        System.out.println(E);
+        System.out.println(F);
+        System.out.println(G);
         System.out.println();
 
         // Задание 5.5
@@ -59,17 +79,20 @@ public class Main {
         Fraction f3 = new Fraction(3, 2);
 
         System.out.println("\nЗадание 5.5:\n");
-        System.out.println(f1 + " * " + f2 + " = " + f1.multiply(f2));
+        // Примеры работы с дробными числами
         System.out.println(f1 + " + " + f2 + " = " + f1.add(f2));
         System.out.println(f1 + " - " + f2 + " = " + f1.subtract(f2));
+        System.out.println(f1 + " * " + f2 + " = " + f1.multiply(f2));
         System.out.println(f1 + " / " + f2 + " = " + f1.divide(f2));
-        System.out.println(f1 + " / " + 5 + " = " + f1.divide(5));
-        System.out.println(f1 + " * " + 5 + " = " + f1.multiply(5));
+        // Примеры работы с целыми числами
         System.out.println(f1 + " + " + 5 + " = " + f1.add(5));
         System.out.println(f1 + " - " + 5 + " = " + f1.subtract(5));
+        System.out.println(f1 + " * " + 5 + " = " + f1.multiply(5));
+        System.out.println(f1 + " / " + 5 + " = " + f1.divide(5));
 
+        // Вычисление выражения f1.sum(f2).div(f3).minus(5)
         Fraction result = f1.add(f2).divide(f3).subtract(5);
-        System.out.println(f1 + " + " + f2 + " / " + f3 + " - 5 = " + result);
+        System.out.println("Искомый пример:" + f1 + " + " + f2 + " / " + f3 + " - 5 = " + result);
         System.out.println();
     }
 }
