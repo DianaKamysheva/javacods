@@ -27,14 +27,14 @@ public class Main {
         System.out.println();
 
         // Задание 2.2
-        Person personCleopatra = new Person(nameCleopatra, 152);
-        Person personPushkin = new Person(namePushkin, 167);
-        Person personMayakovsky = new Person(nameMayakovsky, 189);
+        cleopatra.setName(nameCleopatra);
+        pushkin.setName(namePushkin);
+        vladimir.setName(nameMayakovsky);
 
         System.out.println("\nЗадание 2.2:\n");
-        System.out.println(personCleopatra);
-        System.out.println(personPushkin);
-        System.out.println(personMayakovsky);
+        System.out.println(cleopatra);
+        System.out.println(pushkin);
+        System.out.println(vladimir);
         System.out.println();
 
         // Задание 3.3 & 4.8

@@ -6,10 +6,15 @@ class City {
     private String name;
     private ArrayList<Route> routes;
 
-    // Конструктор
+    // Конструктор для создания города только с именем
     public City(String name) {
         setName(name);
         this.routes = new ArrayList<>();
+    }
+    // Конструктор для создания города с именем и набором путей
+    public City(String name, ArrayList routes) {
+        setName(name);
+        this.routes = routes;
     }
 
     // Добавление маршрута
