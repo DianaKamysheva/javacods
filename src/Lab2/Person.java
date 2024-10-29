@@ -2,7 +2,7 @@
 package Lab2;
 
 class Person {
-    private String name;
+    private Object name;
     private int height;
 
     public Person(String name, int height) {
@@ -18,8 +18,8 @@ class Person {
         setHeight(height);
     }
 
-    public void setName(String name) {
-        if (name == null || name.trim().isEmpty()) {
+    public void setName(Object name) {
+        if (name == null) {
             throw new IllegalArgumentException("Имя не может быть пустым или null."); // Защита от пустого значения
         }
         this.name = name;
