@@ -74,7 +74,7 @@ public class Main {
         System.out.println();
 
         // Задание 5.5
-        Fraction f1 = new Fraction(1, 3);
+        Fraction f1 = new Fraction(0, 3);
         Fraction f2 = new Fraction(2, 3);
         Fraction f3 = new Fraction(3, 2);
 

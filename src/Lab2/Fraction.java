@@ -13,6 +13,7 @@ class Fraction {
         }
         this.numerator = numerator; // инициализация числителя
         this.denominator = denominator; // инициализация знаменателя
+        simplify();
     }
 
     // Метод для сложения двух дробей
@@ -79,5 +80,27 @@ class Fraction {
     @Override
     public String toString() {
         return numerator + "/" + denominator;
+    }
+
+    // Метод для сокращения дроби
+    private void simplify() {
+        int gcd = gcd(numerator, denominator);
+        numerator /= gcd;
+        denominator /= gcd;
+
+        if (denominator < 0) {
+            numerator *= -1;
+            denominator *= -1;
+        }
+    }
+
+    // Метод для нахождения наибольшего общего делителя (GCD)
+    private int gcd(int a, int b) {
+        while (b != 0) {
+            int temp = b;
+            b = a % b;
+            a = temp;
+        }
+        return a;
     }
 }
