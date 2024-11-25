@@ -3,14 +3,18 @@ package Lab4;
 import java.util.List;
 
 public class MaxFinder {
-    public static double findMax(List<Box<Integer>> boxes) {
-        double max = Double.NEGATIVE_INFINITY;
-        for (Box<? extends Number> box : boxes) {
+    public static double findMaxValue(List<Box<Number>> boxes) {
+        double max = Double.NEGATIVE_INFINITY; // Начальное значение для поиска максимума
+
+        for (Box<Number> box : boxes) {
             if (!box.isEmpty()) {
-                Number number = (Number) box.get();
-                max = Math.max(max, number.compare(number));
+                double value = box.get().doubleValue();
+                if (value > max) {
+                    max = value;
+                }
             }
         }
-        return max;
+
+        return max == Double.NEGATIVE_INFINITY ? Double.NaN : max; // Если не нашли, возвращаем NaN
     }
 }
