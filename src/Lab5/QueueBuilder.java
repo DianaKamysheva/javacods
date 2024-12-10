@@ -10,7 +10,7 @@ class QueueBuilder {
         for (int i = 0; i < L.size(); i++) {
             queue.add(L.get(i));
         }
-        for (int i = L.size() - 2; i >= 0; i--) {
+        for (int i = L.size() - 1; i >= 0; i--) {
             queue.add(L.get(i));
         }
         return queue;
