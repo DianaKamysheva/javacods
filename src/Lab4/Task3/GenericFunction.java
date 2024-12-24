@@ -1,4 +1,5 @@
 package Lab4.Task3;
+//3_1
 
 import java.util.Arrays;
 import java.util.List;
@@ -14,15 +15,15 @@ public class GenericFunction {
     }
 
     public static void main(String[] args) {
-        // длина строк
+        // длины строк
         List<String> strings = Arrays.asList("qwerty", "asdfg", "zx");
         List<Integer> lengths = transformList(strings, String::length);
         System.out.println("Длины строк: " + lengths);
 
-        // модуль чисел
+        // неотрицательные значения
         List<Integer> numbers = Arrays.asList(1, -3, 7);
         List<Integer> absoluteValues = transformList(numbers, Math::abs);
-        System.out.println("Абсолютные значения: " + absoluteValues);
+        System.out.println("Неотрицательные значения: " + absoluteValues);
 
         // максимальные значения из массивов
         List<int[]> arrays = Arrays.asList(
@@ -34,6 +35,6 @@ public class GenericFunction {
         List<Integer> maxValues = transformList(arrays, array ->
                 Arrays.stream(array).max().orElseThrow()
         );
-        System.out.println("Максимальные значения: " + maxValues);
+        System.out.println("Максимальные значения из массивов: " + maxValues);
     }
 }

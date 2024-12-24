@@ -1,3 +1,5 @@
+package Lab4.Task3;
+//3_4
 import java.util.*;
 import java.util.function.BiConsumer;
 import java.util.function.Supplier;

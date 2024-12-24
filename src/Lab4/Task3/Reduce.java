@@ -1,4 +1,5 @@
 package Lab4.Task3;
+//3_3
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -53,6 +54,6 @@ public class Reduce {
                 }, new ArrayList<>()
         );
         int totalCount = reduce(totalCountsList, Integer::sum, 0);
-        System.out.println("Общее кол-во элементов: " + totalCount);
+        System.out.println("Общее количество элементов: " + totalCount);
     }
 }

@@ -1,4 +1,5 @@
 package Lab4.Task3;
+//3_2
 
 import java.util.ArrayList;
 import java.util.Arrays;
