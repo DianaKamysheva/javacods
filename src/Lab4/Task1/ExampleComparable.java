@@ -9,6 +9,6 @@ class ExampleComparable implements Comparable<String> {
 
     @Override
     public String toString() {
-        return "Пример строки";
+        return "Пример строки:";
     }
 }
