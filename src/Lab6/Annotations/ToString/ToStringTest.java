@@ -3,12 +3,11 @@ package Lab6.Annotations.ToString;
 @ToString
 public class ToStringTest {
     @ToString(value = "NO")
-    private String field;
+    private int exampleField;
 
-    private int number;
-
-    @Override
-    public String toString() {
-        return "Пример. Поле='" + field + "', Число=" + number + "}";
+    public static void main(String[] args) {
+        // Пример использования аннотированного класса
+        ToStringTest example = new ToStringTest();
+        System.out.println("Класс ExampleClass аннотирован @ToString с значением YES");
     }
 }
